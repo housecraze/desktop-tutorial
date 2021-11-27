@@ -1,0 +1,313 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@font-face { 
+	font-family: Aquire;
+	font-weight: bold;
+	src: url('Aquire-BW0ox.otf'); 
+} 
+
+@font-face {
+	font-family: AquireB;
+	font-weight: bold;
+	src: url('AquireBold-8Ma60.otf'); 
+	
+}
+
+body {
+	background-color: black;
+	color: white;
+}
+
+.page1 {
+	min-height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	background-color: black;
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+	z-index:300;
+	
+}
+
+.nav-links {
+	background-color: black;
+	flex: 1;
+	text-align: left;
+}
+
+.nav-links ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 8px 30px;
+	position: relative;
+}
+
+.nav-links ul li a {
+	color: white;
+	text-decoration: none;
+	font-family: arial;
+	font-size: 15px;
+}
+
+.nav-links ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #E32A4B;
+	display: block;
+	margin: auto;
+	transition: .5s;
+}
+
+.nav-links ul li:hover::after {
+	width: 100%;
+}
+
+.title {
+	height: 130px;
+	width: 30px;
+	background-image: linear-gradient(#2E4EFA, #E32A4B);
+	position: absolute;
+	top: 30%;
+	left: 25%;
+	
+}
+
+.title h1 {
+	font-family: aquire;
+	font-size: 70px;
+	padding-left: 15px;
+}
+
+.title .logo img {
+	width: 400px;
+	height: auto;
+	padding-left: 270px;
+	margin-top: -180px;
+	
+}
+
+.white-line {
+	height: 50px;
+	width: 5px;
+	background-color: white;
+	margin-top: -100px;
+}
+
+.white-line h1 {
+	white-space: nowrap;
+	font-size: 17px;
+	padding-top: 9px;
+}
+
+.btn {
+	padding: 50px 0;
+}
+
+.btn a{
+	white-space: nowrap;
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+	font-family: arial;
+}
+
+.btn a:hover {
+	border: 1px solid #E32A4B;
+	background: #E32A4B;
+	transition: 1s;
+}
+
+nav .fa {
+	display: none;
+}
+
+/* ----- services ---- */
+
+.page2 {
+	padding-bottom: 10%;
+	padding-top: 5%;
+}
+
+
+.laptop img {
+	position: relative;
+	width: 50%;
+	height: auto;
+	margin-left: -150px;
+	opacity: 70%;
+}
+
+.laptop h1 {
+	font-family: aquireB;
+	font-size: 70px;
+	padding-left: 35%;
+	
+}
+
+.laptop .offered ul {
+	margin-top: -330px;
+	padding-left: 45%;
+	font-family: aquire;
+	font-size: 30px;
+}
+
+.laptop .offered ul li {
+	padding: 7px 7px;
+	
+}
+
+@media screen and (max-width: 1200px) {
+	.laptop h1 {
+		font-size: 50px;
+		padding-left: 35%;
+	}
+	
+	.laptop .offered ul {
+	margin-top: -300px;
+	padding-left: 40%;
+	font-family: aquire;
+	font-size: 20px;
+	position: relative;
+	}
+
+	.laptop .offered ul li {
+	padding: 7px 7px;
+	
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.laptop h1 {
+		font-size: 50px;
+		padding-left: 35%;
+	}
+	
+	.laptop .offered ul {
+	margin-top: -200px;
+	padding-left: 40%;
+	font-family: aquire;
+	font-size: 20px;
+		position: relative;
+	}
+
+	.laptop .offered ul li {
+	padding: 7px 7px;
+	
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.logo img {
+		display: none;
+	}
+	
+	.title {
+		height: 110px;
+		width: 20px;
+		background-image: linear-gradient(#2E4EFA, #E32A4B);
+		position: absolute;
+		top: 30%;
+		left: 25%;
+	
+	}
+	
+	.title h1 {
+		font-size: 60px;
+		padding-left: 15px;
+	}
+	
+	.white-line {
+		height: 50px;
+		width: 5px;
+		background-color: white;
+		margin-top: 20px;
+	}
+	
+	.white-line h1 {
+	white-space: nowrap;
+	font-size: 15px;
+	padding-top: 9px;
+	}
+	
+	.nav-links ul li {
+		display: block;
+	}
+	
+	.nav-links{
+	   position: absolute;
+	   background: #333333;
+	   height: 100vh;
+	   width: 200px;
+	   top: 0;
+	   left: -200px;
+	   text-align: left;
+	   z-index: 2;
+		transition: 1s;
+	}
+	
+	nav .fa-times{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	
+	nav .fa-bars {
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+		
+	}
+	
+	.nav-links ul {
+		padding: 30px;
+	}
+	
+	
+	/* ---- SERVICES ----*/
+	
+	.laptop img {
+		display: none;
+	}
+	
+	.laptop h1 {
+		font-size: 50px;
+		padding-left: 25%;
+	}
+	
+	.laptop .offered ul {
+	margin-top: 50px;
+	padding-left: 35%;
+	font-family: aquire;
+	font-size: 20px;
+	}
+
+	.laptop .offered ul li {
+	padding: 7px 7px;
+	
+	}
+}
+
